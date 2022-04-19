@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
@@ -12,9 +12,9 @@ const LoginPage = () => {
         }}
       ></div>
       <div className="contents order-2 order-md-1">
-        <Container className="container">
+        <Container>
           <Row className="align-items-center justify-content-center">
-            <Col md={7} className="col-md-7">
+            <Col md={7}>
               <h3>
                 Login to <strong>Clay Ovens</strong>
               </h3>
@@ -38,9 +38,9 @@ const LoginPage = () => {
 
                 <div class="d-flex mb-5 align-items-center">
                   <span class="ms-auto">
-                    <a href="#" className="forgot-pass link">
+                    <Link to={"/"} className="forgot-pass link">
                       Forgot Password
-                    </a>
+                    </Link>
                   </span>
                 </div>
 
