@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-      style={{ paddingTop: 130 }}
+      style={{ paddingTop: 200 }}
       class="mastfoot pb-5 bg-white section-padding pb-0"
     >
       <Container class="inner">

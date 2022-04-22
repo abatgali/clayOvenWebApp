@@ -13,24 +13,18 @@ const Hero = () => {
             </h1>
             <div className="mb-2">
               <Link to="/">
-                <div className="btn-primary-red mt-3">Order Now</div>
+                <div
+                  style={{
+                    padding: 15,
+                    width: "50%",
+                    textAlign: "center",
+                  }}
+                  className="btn-primary-red mt-3"
+                >
+                  Order Now
+                </div>
               </Link>
             </div>
-
-            <ul className="hero-info list-unstyled d-flex text-center mb-0">
-              <li className="border-right">
-                <span class="lnr lnr-rocket"></span>
-                <h5>Fast Delivery</h5>
-              </li>
-              <li className="border-right">
-                <span class="lnr lnr-leaf"></span>
-                <h5>Fresh Food</h5>
-              </li>
-              <li className="border-right">
-                <span class="lnr lnr-bubble"></span>
-                <h5>24/7 Support</h5>
-              </li>
-            </ul>
           </Col>
           <Col lg={6} className="hero-right">
             <Carousel>

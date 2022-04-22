@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, FloatingLabel, Form, Row } from "react-bootstrap";
 
 const Reservation = () => {
   return (
@@ -25,106 +25,75 @@ const Reservation = () => {
                 <span className="subheading">Reservation</span>
                 <h2>Book Now</h2>
               </div>
-              <form action="" method="post" name="contact-us">
-                <Row>
-                  <Col md={12} className="form-group">
-                    <input
-                      className="form-control"
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Name"
-                    />
-                  </Col>
-                  <Col md={12} className="form-group">
-                    <input
-                      className="form-control"
-                      type="text"
-                      id="email"
-                      name="email"
-                      placeholder="Email"
-                    />
-                  </Col>
-                  <Col md={12} className="form-group">
-                    <input
-                      className="form-control"
-                      type="text"
-                      id="phone"
-                      name="phone"
-                      placeholder="Phone"
-                    />
-                  </Col>
+              <Form>
+                <Form.Floating className="mb-3">
+                  <Form.Control type="text" placeholder="Name" />
+                  <label>Name</label>
+                </Form.Floating>
 
-                  <Col md={6} className="form-group">
-                    <div className="input-group date" id="datetimepicker4">
-                      <input
-                        type="text"
-                        className="form-control datetimepicker-input"
-                        target="#datetimepicker4"
-                        placeholder="Date"
-                      />
-                    </div>
-                  </Col>
-                  <Col md={6} className="form-group">
-                    <div className="input-group date" id="datetimepicker4">
-                      <input
-                        type="text"
-                        className="form-control datetimepicker-input"
-                        target="#datetimepicker4"
-                        placeholder="Time"
-                      />
-                    </div>
-                  </Col>
+                <Form.Floating className="mb-3">
+                  <Form.Control type="email" placeholder="Email" />
+                  <label>Email</label>
+                </Form.Floating>
 
-                  <Col md={12} className="form-group">
-                    <select
-                      name=""
-                      className="form-control select2-hidden-accessible"
-                      id="selectPerson"
-                      aria-hidden="true"
-                      tabIndex={-1}
-                      placeholder="Person"
-                    >
-                      <option></option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                    </select>
-                  </Col>
+                <Form.Floating className="mb-3">
+                  <Form.Control type="text" placeholder="Phone" />
+                  <label>Phone</label>
+                </Form.Floating>
 
-                  <Col md={12} className="form-group">
-                    <textarea
-                      class="form-control"
-                      id="message"
-                      name="message"
-                      rows="6"
-                      placeholder="Your Message ..."
-                    ></textarea>
-                  </Col>
+                <Form.Floating className="mb-3">
+                  <Form.Control type="date" placeholder="Date" />
+                  <label>Date</label>
+                </Form.Floating>
 
-                  <Col md={12} className="text-center">
-                    <button
-                      style={{
-                        display: "inline-block",
-                        backgroundColor: "#f34949",
-                        borderColor: "#f34949",
-                        color: "#fff",
-                        borderRadius: 30,
-                        padding: "9px 25px",
-                        textTransform: "capitalize",
-                        transition: "all 0.3s ease 0s",
-                      }}
-                      className="btn btn-primary-red btn-shadow btn-lg"
-                      type="submit"
-                      name="submit"
-                    >
-                      Send Message
-                    </button>
-                  </Col>
-                </Row>
-              </form>
+                <Form.Floating className="mb-3">
+                  <Form.Control type="time" placeholder="Time" />
+                  <label>Time</label>
+                </Form.Floating>
+
+                <FloatingLabel className="mb-3" label="Persons">
+                  <Form.Select aria-label="Floating label select example">
+                    <option>Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </Form.Select>
+                </FloatingLabel>
+
+                <FloatingLabel
+                  className="mb-3"
+                  controlId="floatingTextarea2"
+                  label="Your Message"
+                >
+                  <Form.Control
+                    as="textarea"
+                    placeholder="Leave a comment here"
+                    style={{ height: 200 }}
+                  />
+                </FloatingLabel>
+
+                <Col md={12} className="text-center">
+                  <button
+                    style={{
+                      display: "inline-block",
+                      backgroundColor: "#f34949",
+                      borderColor: "#f34949",
+                      color: "#fff",
+                      borderRadius: 30,
+                      padding: "9px 25px",
+                      textTransform: "capitalize",
+                      transition: "all 0.3s ease 0s",
+                    }}
+                    className="btn btn-primary-red btn-shadow btn-lg"
+                    type="submit"
+                    name="submit"
+                  >
+                    Send Message
+                  </button>
+                </Col>
+              </Form>
             </div>
           </Col>
         </Row>
