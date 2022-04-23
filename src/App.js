@@ -5,6 +5,7 @@ import GiftCardPage from "./pages/giftcard-page";
 import HomePage from "./pages/home-page";
 import LoginPage from "./pages/login-page";
 import MenuPage from "./pages/menu-page";
+import OrderPage from "./pages/order-page";
 import SignupPage from "./pages/signup-page";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/giftcard" element={<GiftCardPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/order" element={<OrderPage />} />
       </Routes>
     </>
   );

@@ -12,7 +12,7 @@ const Hero = () => {
               We Love <br /> Delicious Foods!
             </h1>
             <div className="mb-2">
-              <Link to="/">
+              <Link to="/order">
                 <div
                   style={{
                     padding: 15,

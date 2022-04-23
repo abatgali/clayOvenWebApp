@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Isotope from "isotope-layout";
+
+const allMenu = [
+  {
+    name: "Cucumber",
+    price: "$5.95",
+    type: "vege",
+  },
+  {
+    name: "Apple",
+    price: "$5.95",
+    type: "fruit",
+  },
+  {
+    name: "Orange",
+    price: "$5.95",
+    type: "fruit",
+  },
+  {
+    name: "Tomato",
+    price: "$5.95",
+    type: "vege fruit",
+  },
+];
 
 const OrderPage = () => {
   const isotope = React.useRef();
   // store the filter keyword in a state
-  const [filterKey, setFilterKey] = React.useState("*");
+  const [filterKey, setFilterKey] = useState("*");
 
   // initialize an Isotope object with configs
   React.useEffect(() => {
@@ -59,48 +82,25 @@ const OrderPage = () => {
         <hr />
 
         <Row className="menu-container filter-container">
-          <Col lg={6} className="menu-item filter-starters filter-item vege">
-            <div class="menu-content">
-              <div className="link">Cucumber</div>
-              <span>$5.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </Col>
-
-          <Col lg={6} className="menu-item filter-starters filter-item fruit">
-            <div class="menu-content">
-              <div className="link">Apple</div>
-              <span>$5.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </Col>
-
-          <Col lg={6} className="menu-item filter-starters filter-item fruit">
-            <div class="menu-content">
-              <div className="link">Orange</div>
-              <span>$5.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </Col>
-
-          <Col
-            lg={6}
-            className="menu-item filter-starters filter-item vege fruit"
-          >
-            <div class="menu-content">
-              <div className="link">Tomato</div>
-              <span>$5.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </Col>
+          {allMenu?.map((item) => (
+            <Col
+              style={{ padding: 20 }}
+              lg={6}
+              className={`menu-item filter-starters filter-item ${item.type} `}
+            >
+              <div className="menu-content">
+                <div className="link">{item.name}</div>
+                <span>{item.price}</span>
+              </div>
+              <div className="menu-ingredients">
+                Lorem, deren, trataro, filede, nerada
+              </div>
+              <div className="ms-auto bubbly-button">
+                Add
+                <i className="fa-solid ms-1 fa-plus"></i>
+              </div>
+            </Col>
+          ))}
         </Row>
       </Container>
     </div>
