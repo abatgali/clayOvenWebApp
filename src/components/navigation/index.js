@@ -1,6 +1,6 @@
 import React from "react";
-import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -8,7 +8,7 @@ const Navigation = () => {
       <Container>
         <Navbar.Brand>
           <Link to={"/"}>
-            <img src="https://assets.codepen.io/1462889/fcy.png" alt="" />
+            <img src={require("../../assets/images/logo.png")} alt="" />
           </Link>
         </Navbar.Brand>
 
@@ -19,19 +19,21 @@ const Navigation = () => {
             style={{ textAlign: "center" }}
             className=" navbar-nav pt-4 py-md-0"
           >
-            <Link
+            <NavLink
               to={"/menu"}
+              activeClassName="active"
               className="nav-link nav-item ps-4  mt-xs-4 ps-md-0 ms-0 ms-md-4"
             >
               Menu
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
+              activeClassName="active"
               to={"/giftcard"}
               className="nav-link nav-item ps-4  mt-xs-4 ps-md-0 ms-0 ms-md-4"
             >
               Gift Card
-            </Link>
+            </NavLink>
           </Nav>
 
           <Nav

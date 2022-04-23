@@ -75,23 +75,19 @@ const Reservation = () => {
                 </FloatingLabel>
 
                 <Col md={12} className="text-center">
-                  <button
+                  <div
+                    className="btn-primary-red "
                     style={{
-                      display: "inline-block",
-                      backgroundColor: "#f34949",
-                      borderColor: "#f34949",
-                      color: "#fff",
-                      borderRadius: 30,
-                      padding: "9px 25px",
-                      textTransform: "capitalize",
-                      transition: "all 0.3s ease 0s",
+                      padding: 15,
+                      width: 140,
+                      marginTop: 5,
+                      textAlign: "center",
+                      borderRadius: 5,
+                      cursor: "pointer",
                     }}
-                    className="btn btn-primary-red btn-shadow btn-lg"
-                    type="submit"
-                    name="submit"
                   >
                     Send Message
-                  </button>
+                  </div>
                 </Col>
               </Form>
             </div>

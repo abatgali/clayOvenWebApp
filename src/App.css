@@ -109,11 +109,12 @@ button:focus {
   font-weight: 600; }
 
 .btn-primary-red {
+  cursor: pointer;
   display: inline-block;
   background-color: #f34949;
   border-color: #f34949;
   color: #fff;
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 9px 25px;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
@@ -728,7 +729,6 @@ h2 {
   font-family: "Satisfy", sans-serif
 }
 
-/* menu item border  */
 
 
 .bubbly-button {
@@ -806,10 +806,10 @@ h2 {
 	padding: 0;
 }
 .navbar-brand img{
-	height: 28px;
+	height: 64px;
 	width: auto;
 	display: block;
-  filter: brightness(10%);
+  /* filter: brightness(10%); */
 	-webkit-transition : all 0.3s ease-out;
 	transition : all 0.3s ease-out;
 }
@@ -820,11 +820,9 @@ h2 {
 	font-weight: 500;
     transition: all 200ms linear;
 }
-.nav-item:hover .nav-link{
+
+.nav-item.active {
 	color: #8167a9 !important;
-}
-.nav-item.active .nav-link{
-	color: #777 !important;
 }
 .nav-link {
 	position: relative;
@@ -853,4 +851,46 @@ h2 {
 .nav-item{
 	position: relative;
     transition: all 200ms linear;
+}
+  
+
+/* ==== Quantity Button ==== */
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  background: #eaeaea;
+  border-radius: 10px;
+  padding: 1rem 0.4rem;
+}
+
+.quantity-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0px 8px;
+  cursor: pointer;
+}
+.quantity-btn svg {
+  width: 15px;
+  height: 15px;
+}
+.quantity-input {
+  outline: none;
+  user-select: none;
+  text-align: center;
+  width: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+}
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

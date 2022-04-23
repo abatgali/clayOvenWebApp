@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Isotope from "isotope-layout";
+import AddToCartModal from "../../components/add-to-cart-modal";
 
 const allMenu = [
   {
@@ -80,7 +81,6 @@ const OrderPage = () => {
           </Col>
         </Row>
         <hr />
-
         <Row className="menu-container filter-container">
           {allMenu?.map((item) => (
             <Col
@@ -102,7 +102,23 @@ const OrderPage = () => {
             </Col>
           ))}
         </Row>
+        <div
+          style={{
+            width: "100%",
+            textAlign: "center",
+            position: "fixed",
+            bottom: 0,
+            left: 0,
+            borderRadius: 0,
+            zIndex: 10,
+          }}
+          className="btn-primary-red d-lg-none"
+        >
+          Cart
+        </div>
       </Container>
+
+      <AddToCartModal />
     </div>
   );
 };
