@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model categories {
+  category_id Int         @id
+  category    String      @db.VarChar(30)
+  live_menu   live_menu[]
+}
+
+model items {
+  item_id     Int         @id
+  name        String      @db.VarChar(50)
+  price       Decimal?    @db.Decimal(10, 2)
+  description String?
+  gluten_free Boolean?    @default(false)
+  vegan_prep  Boolean?    @default(false)
+  image       String?
+  live_menu   live_menu[]
+
+  @@unique([name, description], map: "items_name_idx")
+}
+
+model live_menu {
+  menu_item_id Int        @id
+  item_id      Int
+  category_id  Int
+  active       Boolean    @default(true)
+  categories   categories @relation(fields: [category_id], references: [category_id])
+  items        items      @relation(fields: [item_id], references: [item_id])
+}
