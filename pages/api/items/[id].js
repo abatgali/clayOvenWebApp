@@ -4,16 +4,17 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export default async function handler(req, res) {
+export default async (req, res) => {
     try {
-        const items = await prisma.items.findUnique({
+        let itemid = parseInt(req.query.id)
+        const item = await prisma.items.findUnique({
             where: {
-                item_id: parseInt(req.query.idu)
-            }
+                item_id: itemid
+            },
         });
+        res.json(item);
+
     } catch (error) {
         res.status(400).json({ error: error.message });
-
     }
-    res.json(items);
 }
