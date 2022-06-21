@@ -1,5 +1,5 @@
 {
-  "name": "clay-oven-web-app",
+  "name": "last-test",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +9,31 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@icon/themify-icons": "^1.0.1-alpha.3",
+    "@popperjs/core": "^2.11.5",
+    "@svgr/webpack": "^6.2.1",
+    "animate.css": "^4.1.1",
+    "animsition": "^4.0.2",
     "bootstrap": "^5.1.3",
-    "isotope-layout": "^3.0.6",
-    "next": "12.1.5",
-    "react": "18.1.0",
-    "react-bootstrap": "^2.3.0",
-    "react-dom": "18.1.0"
+    "code-prettify": "^0.1.0",
+    "font-awesome": "^4.7.0",
+    "google-maps": "^4.3.3",
+    "include-media": "^1.4.10",
+    "jarallax": "^2.0.3",
+    "jquery": "^3.6.0",
+    "jquery-validation": "^1.19.4",
+    "jquery.appear": "^1.0.1",
+    "local-storage": "^2.0.0",
+    "next": "12.1.6",
+    "node-sass": "^7.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "slick-carousel": "^1.8.1",
+    "twitter-fetcher": "^18.0.4",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
-    "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5"
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6"
   }
 }

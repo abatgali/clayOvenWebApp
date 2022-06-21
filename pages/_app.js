@@ -1,44 +1,27 @@
-import "../styles/globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import NavLayout from "../components/layout";
-import Head from "next/head";
-
+import { useEffect, useState, createContext } from "react";
+import "../styles/globals.scss";
+const JSON_CATEGORIES = require("./../public/data/categories.json");
+const JSON_MENU = require("./../public/data/menu.json");
+const JSON_DELIVERY = require("./../public/data/delivery.json");
+export const dataContext = createContext();
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Head>
-        <title>Clay Ovens</title>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i"
-          rel="stylesheet"
-        />
+  const [menu, setmenu] = useState(JSON_MENU);
+  const [categories, setCategories] = useState(JSON_CATEGORIES);
+  const [delivery, setdelivery] = useState(JSON_DELIVERY);
 
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-          crossOrigin="anonymous"
-          referrerpolicy="no-referrer"
-        />
-      </Head>
-      <NavLayout>
-        <Component {...pageProps} />
-      </NavLayout>
-    </>
+  useEffect(() => {
+    return () => {};
+  }, []);
+  return (
+    <dataContext.Provider
+      value={{
+        categories: [categories, setCategories],
+        menu: [menu, setmenu],
+        delivery: [delivery, setdelivery],
+      }}
+    >
+      <Component {...pageProps} />
+    </dataContext.Provider>
   );
 }
 

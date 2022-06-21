@@ -1,0 +1,121 @@
+import React from "react";
+
+function Footer() {
+  return (
+    <footer id="footer" className="bg-primary-dark dark">
+      <div className="container">
+        {/* Footer 1st Row */}
+        <div className="footer-first-row row">
+          <div className="col-lg-3 text-center">
+            <a href="index.html">
+              <img
+                src="/logo-light-green.svg"
+                alt
+                width={88}
+                className="mt-5 mb-5"
+              />
+            </a>
+          </div>
+          <div className="col-lg-4 col-md-6">
+            <address>
+              <h6 className="mb-1 text-muted">Address:</h6>
+              <span>Green Street 22, New York</span>
+              <br />
+              <br />
+              <h6 className="mb-1 text-muted">Phone:</h6>
+              +48 21200 2122 221
+              <br />
+              <br />
+              <h6 className="mb-1 text-muted">E-mail:</h6>
+              <a href="#">hello@example.com</a>
+            </address>
+          </div>
+          <div className="col-lg-5 col-md-6">
+            <h5 className="text-muted">Subscribe Us!</h5>
+            {/* MailChimp Form */}
+            <form
+              action="//suelo.us12.list-manage.com/subscribe/post-json?u=ed47dbfe167d906f2bc46a01b&id=24ac8a22ad"
+              id="sign-up-form"
+              className="sign-up-form validate-form mb-5"
+              method="POST"
+            >
+              <div className="input-group">
+                <input
+                  name="EMAIL"
+                  id="mce-EMAIL"
+                  type="email"
+                  className="form-control"
+                  placeholder="Tap your e-mail..."
+                  required
+                />
+                <span className="input-group-btn">
+                  <button className="btn btn-primary btn-submit" type="submit">
+                    <span className="description">Subscribe</span>
+                    <span className="success">
+                      <svg x="0px" y="0px" viewBox="0 0 32 32">
+                        <path
+                          strokeDasharray="19.79 19.79"
+                          strokeDashoffset="19.79"
+                          fill="none"
+                          stroke="#FFFFFF"
+                          strokeWidth={2}
+                          strokeLinecap="square"
+                          strokeMiterlimit={10}
+                          d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"
+                        />
+                      </svg>
+                    </span>
+                    <span className="error">Try again...</span>
+                  </button>
+                </span>
+              </div>
+            </form>
+            <h5 className="text-muted mb-3">Social Media</h5>
+            <a
+              href="#"
+              className="icon icon-social icon-circle icon-sm icon-facebook"
+            >
+              <i className="fa fa-facebook" />
+            </a>
+            <a
+              href="#"
+              className="icon icon-social icon-circle icon-sm icon-google"
+            >
+              <i className="fa fa-google" />
+            </a>
+            <a
+              href="#"
+              className="icon icon-social icon-circle icon-sm icon-twitter"
+            >
+              <i className="fa fa-twitter" />
+            </a>
+            <a
+              href="#"
+              className="icon icon-social icon-circle icon-sm icon-youtube"
+            >
+              <i className="fa fa-youtube" />
+            </a>
+            <a
+              href="#"
+              className="icon icon-social icon-circle icon-sm icon-instagram"
+            >
+              <i className="fa fa-instagram" />
+            </a>
+          </div>
+        </div>
+        {/* Footer 2nd Row */}
+        <div className="footer-second-row">
+          <span className="text-muted">
+            Copyright Soup 2020©. Made with love by Suelo.
+          </span>
+        </div>
+      </div>
+      {/* Back To Top */}
+      <button id="back-to-top" className="back-to-top">
+        <i className="ti ti-angle-up" />
+      </button>
+    </footer>
+  );
+}
+
+export default Footer;
