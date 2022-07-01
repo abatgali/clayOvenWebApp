@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Cart() {
@@ -96,58 +97,14 @@ function Cart() {
             </div>
           </div>
         </div>
-        <a
-          href="/checkout"
-          className="panel-cart-action btn btn-secondary btn-block btn-lg"
-        >
-          <span>Go to checkout</span>
-        </a>
+        <Link href={"/checkout"}>
+          <a className="panel-cart-action btn btn-secondary btn-block btn-lg">
+            <span>Go to checkout</span>
+          </a>
+        </Link>
       </div>
       {/* Panel Mobile */}
-      <nav id="panel-mobile">
-        <div className="module module-logo bg-dark dark">
-          <a href="#">
-            <img src="assets/img/logo-light.svg" alt width={88} />
-          </a>
-          <button className="close" data-toggle="panel-mobile">
-            <i className="ti ti-close" />
-          </button>
-        </div>
-        <nav className="module module-navigation" />
-        <div className="module module-social">
-          <h6 className="text-sm mb-3">Follow Us!</h6>
-          <a
-            href="#"
-            className="icon icon-social icon-circle icon-sm icon-facebook"
-          >
-            <i className="fa fa-facebook" />
-          </a>
-          <a
-            href="#"
-            className="icon icon-social icon-circle icon-sm icon-google"
-          >
-            <i className="fa fa-google" />
-          </a>
-          <a
-            href="#"
-            className="icon icon-social icon-circle icon-sm icon-twitter"
-          >
-            <i className="fa fa-twitter" />
-          </a>
-          <a
-            href="#"
-            className="icon icon-social icon-circle icon-sm icon-youtube"
-          >
-            <i className="fa fa-youtube" />
-          </a>
-          <a
-            href="#"
-            className="icon icon-social icon-circle icon-sm icon-instagram"
-          >
-            <i className="fa fa-instagram" />
-          </a>
-        </div>
-      </nav>
+
       {/* Body Overlay */}
       <div id="body-overlay" />
     </div>

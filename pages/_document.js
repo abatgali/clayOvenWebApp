@@ -1,6 +1,8 @@
 import { Html, Head as Header, Main, NextScript } from "next/document";
+import { useEffect } from "react";
 
 export default function Document() {
+  // useEffe
   return (
     <Html>
       <Header>

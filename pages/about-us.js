@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import Banner from "../components/template/AboutUs/Banner";
 
 function Aboutus() {
+  useEffect(() => {
+    if (window.RunMe) {
+      window.RunMe();
+    }
+
+    return () => {};
+  }, []);
+
   return (
     <Layout>
       <Banner />

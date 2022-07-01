@@ -1,15 +1,14 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Banner from "../components/template/Offers/Banner";
+import Banner from "../components/template/Offer/Banner";
 
-const Offers = () => {
+const Offer = () => {
   return (
     <Layout>
       <Banner />
-
       <div className="page-content bg-light">
         <div className="container">
-          <div className="special-offer mb-5 animated" data-animation="fadeIn">
+          <div className="special-offer mb-5 " data-animation="fadeIn">
             <img
               src="http://assets.suelo.pl/soup/img/photos/special-burger.jpg"
               alt=""
@@ -27,7 +26,8 @@ const Offers = () => {
               </ul>
             </div>
           </div>
-          <div className="special-offer mb-5 animated" data-animation="fadeIn">
+
+          <div className="special-offer mb-5 " data-animation="fadeIn">
             <img
               src="http://assets.suelo.pl/soup/img/photos/special-pizza.jpg"
               alt=""
@@ -44,7 +44,8 @@ const Offers = () => {
               </ul>
             </div>
           </div>
-          <div className="special-offer mb-5 animated" data-animation="fadeIn">
+
+          <div className="special-offer mb-5 " data-animation="fadeIn">
             <img
               src="http://assets.suelo.pl/soup/img/photos/special-dish.jpg"
               alt=""
@@ -66,4 +67,4 @@ const Offers = () => {
   );
 };
 
-export default Offers;
+export default Offer;

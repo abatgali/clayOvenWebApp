@@ -7,7 +7,7 @@ import StepsSection from "../components/template/Home/StepsSection";
 import AboutReview from "../components/template/Home/AboutReview";
 import VideoSection from "../components/template/Home/VideoSection";
 
-const Home = () => {
+export default function Home() {
   return (
     <Layout>
       <Section />
@@ -19,6 +19,4 @@ const Home = () => {
       <VideoSection />
     </Layout>
   );
-};
-
-export default Home;
+}

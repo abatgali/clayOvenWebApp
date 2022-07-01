@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function ModalCart() {
+  useEffect(() => {
+    document.getElementById("closeModalCart").addEventListener("click", () => {
+      if (document.querySelectorAll(".modal-backdrop").length > 0) {
+        document.querySelectorAll(".modal-backdrop").forEach((ele, index) => {
+          ele.remove();
+        });
+      }
+    });
+    document.getElementById("AddToCart_").addEventListener("click", () => {
+      if (document.querySelectorAll(".modal-backdrop").length > 0) {
+        document.querySelectorAll(".modal-backdrop").forEach((ele, index) => {
+          ele.remove();
+        });
+      }
+    });
+
+    return () => {};
+  }, []);
+
   return (
     <div>
       {/* Modal / Product */}
@@ -24,6 +43,7 @@ export default function ModalCart() {
                 className="close"
                 data-dismiss="modal"
                 aria-label="Close"
+                id="closeModalCart"
               >
                 <i className="ti ti-close" />
               </button>
@@ -226,6 +246,7 @@ export default function ModalCart() {
               type="button"
               className="modal-btn btn btn-secondary btn-block btn-lg"
               data-action="add-to-cart"
+              id="AddToCart_"
             >
               <span>Add to Cart</span>
             </button>

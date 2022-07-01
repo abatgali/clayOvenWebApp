@@ -40,16 +40,18 @@ function MenuCategory() {
         {categories.map((ele, index) => {
           return (
             <div className="menu-sample" key={index}>
-              <a
-                href={`products#${ele.slug}`}
+              <Link href={`products#${ele.slug}`}>
+                <a
+
                 // onClick={(e) => {
                 //   e.preventDefault();
                 //   router.push("/products");
                 // }}
-              >
-                <img src={ele.bannerImage} alt className="image" />
-                <h3 className="title">{ele.name}</h3>
-              </a>
+                >
+                  <img src={ele.bannerImage} alt className="image" />
+                  <h3 className="title">{ele.name}</h3>
+                </a>
+              </Link>
             </div>
           );
         })}

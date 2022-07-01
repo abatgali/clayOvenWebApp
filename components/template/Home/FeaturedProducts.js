@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { useContext, useEffect } from "react";
 import { dataContext } from "../../../pages/_app";
@@ -52,9 +53,11 @@ function FeaturedProducts() {
           })}
         </div>
         <div className="text-center mt-5">
-          <a href="/products" className="btn btn-secondary">
-            <span>View Our Menu</span>
-          </a>
+          <Link href={"/products"}>
+            <a className="btn btn-secondary">
+              <span>View Our Menu</span>
+            </a>
+          </Link>
         </div>
       </div>
     </section>
